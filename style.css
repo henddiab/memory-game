@@ -1,0 +1,99 @@
+body {
+    background: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    font-family: 'Indie Flower', cursive;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 20px;
+    border: none;
+    background-color: darkseagreen;
+    cursor: pointer;
+}
+
+label,
+span,
+button {
+    color: white;
+}
+
+label,
+span {
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card {
+    width: calc(25% - 15px);
+    height: calc(33.3% - 15px);
+    position: relative;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all ease-in-out .6s;
+    transform-style: preserve-3d;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    padding: 3%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: all ease-in-out .6s;
+}
+
+.flipAnimation {
+    transform: rotateY(180deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.disabled {
+    pointer-events: none;
+}
